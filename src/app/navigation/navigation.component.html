@@ -1,0 +1,12 @@
+<div class="tab-container">
+  <input type="radio" name="tab" id="tab1" class="tab tab--1" [(ngModel)]="selectedTab" value="home" />
+  <label class="tab_label" for="tab1" routerLink="/">Home</label>
+
+  <input type="radio" name="tab" id="tab2" class="tab tab--2" [(ngModel)]="selectedTab" value="projects" />
+  <label class="tab_label" for="tab2" routerLink="projects">Projects</label>
+
+  <input type="radio" name="tab" id="tab3" class="tab tab--3" [(ngModel)]="selectedTab" value="contact" />
+  <label class="tab_label" for="tab3" routerLink="contact">Contact</label>
+
+  <div class="indicator"></div>
+</div>

@@ -1,0 +1,157 @@
+.container {
+  width: 940px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.block {
+  background-color: #555;
+  border-radius: 15px;
+}
+
+.who-am-i {
+  width: 620px;
+  height: 165px;
+  background-color: #444;
+  animation: appearFromLeft 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.image {
+  width: 300px;
+  height: 316px;
+  background-color: #555;
+  margin-bottom: -195px;
+  animation: appearFromTop 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.student-full-stack {
+  width: 300px;
+  height: 100px;
+  background-color: #666;
+  animation: appearFromBottom 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.logo {
+  width: 300px;
+  height: 250px;
+  background-color: #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: appearFromCenter 1s forwards;
+
+  img {
+    height: 180px;
+    cursor: pointer;
+  }
+
+  h1 {
+    color: #fff;
+    -webkit-text-stroke: 1px white;
+    font-weight: bolder;
+    stroke: white;
+    font-style: italic;
+  }
+}
+
+.quote {
+  width: 300px;
+  height: 100px;
+  background-color: #888;
+  margin-top: auto;
+  animation: appearFromTop 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.technologies {
+  margin-top: -150px;
+  width: 300px;
+  height: 340px;
+  background-color: #999;
+  animation: appearFromBottom 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.education {
+  width: 620px;
+  height: 190px;
+  background-color: #aaa;
+  animation: appearFromRight 1.2s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes appearFromCenter {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes appearFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes appearFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    filter: blur(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}

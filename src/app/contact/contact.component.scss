@@ -1,98 +1,149 @@
-.tooltip-container {
-  height: 70px;
-  width: 110px;
-  border-radius: 5px;
-  background-color: #fff;
-  background-image: linear-gradient(
-      to left bottom,
-      #f2f5f8,
-      #ecf1f2,
-      #e7eceb,
-      #e3e7e4,
-      #e1e2de
-  );
-  border: 1px solid white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.151);
-  position: relative;
-  transition: transform 0.3s ease;
-  z-index: 1;
-}
-
-.tooltip-container::before {
-  position: absolute;
-  content: "";
-  top: -50%;
-  clip-path: polygon(50% 0, 0 100%, 100% 100%);
-  border-radius: 5px;
-  background-color: #fff;
-  background-image: linear-gradient(
-      to left bottom,
-      #1288ff,
-      #e4eaec,
-      #d8dfde,
-      #cdd3cf,
-      #c5c7c1
-  );
-  width: 100%;
-  height: 50%;
-  transform-style: preserve-3d;
-  transform: perspective(1000px) rotateX(-150deg) translateY(-110%);
-  transition: transform 0.3s ease;
-  z-index: -1;
-}
-
-.tooltip-container .text {
-  color: rgb(32, 30, 30);
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.tooltip {
-  position: absolute;
-  top: -20px;
-  opacity: 0;
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0.05) 1px, white 1px),
-  linear-gradient(rgba(0, 0, 0, 0.05) 1px, white 1px),
-  linear-gradient(-90deg, rgba(0, 0, 0, 0.04) 1px, white 1px),
-  linear-gradient(rgba(0, 0, 0, 0.04) 1px, white 1px),
-  linear-gradient(white 3px, #f2f2f2 3px, #f2f2f2 78px, white 78px),
-  linear-gradient(-90deg, #aaa 1px, white 1px),
-  linear-gradient(-90deg, white 3px, #f2f2f2 3px, #f2f2f2 78px, white 78px),
-  linear-gradient(#aaa 1px, white 1px), #f2f2f2;
-  background-size: 4px 4px, 4px 4px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
-  80px 80px, 80px 80px;
-  padding: 5px 10px;
-  border: 1px solid rgb(206, 204, 204);
-
-  height: 70px;
+.block {
+  background-color: #555;
+  border-radius: 15px;
+  height: 200px;
   width: 200px;
-  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    scale: 1.02;
+    background-color: #666;
+  }
+}
+
+h1 {
+  color: #fff;
+  -webkit-text-stroke: 1px white;
+  font-weight: bolder;
+  stroke: white;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.contact-title {
+  margin-top: 30px;
+}
+
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition-duration: 0.2s;
-  pointer-events: none;
-  letter-spacing: 0.5px;
-  font-size: 18px;
-  font-weight: 600;
-}
-.tooltip-container:hover {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  gap: 30px;
+
+  .github {
+    animation: appearFromLeft 1.2s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      filter: invert(1);
+      width: 200px;
+    }
+  }
+
+  .linkedin {
+    animation: appearFromRight 1.2s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 120px;
+    }
+  }
 }
 
-.tooltip-container:hover::before {
-  transform: rotateY(0);
-  background-image: none;
-  background-color: white;
-}
+.contact-container {
+  animation: appearFromCenter 1.2s forwards;
+  .label, textarea {
+    position: relative;
+    width: 100%;
+    display: flex;
+    border-radius: 6px;
+    border: 2px solid #373737;
+    padding: 15px 8px 15px 10px;
+    text-align: left;
+    margin-bottom: 15px;
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
 
-.tooltip-container:hover .tooltip {
-  top: -90px;
-  opacity: 1;
-  transition-duration: 0.3s;
+    .icon {
+      position: absolute;
+      top: 53%;
+      right: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+
+      img {
+        width: 25px;
+      }
+    }
+
+    .input {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: #c5c5c5;
+      font-size: 16px;
+    }
+  }
+
+  .textarea-field {
+    position: relative;
+    display: flex;
+
+    .label {
+      overflow: hidden;
+      width: 100%;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+
+    .icon {
+      position: absolute;
+      right: 12px;
+      bottom: 38px;
+      display: flex;
+      align-items: center;
+      pointer-events: none;
+
+      img {
+        width: 25px;
+      }
+    }
+  }
+
+  .submit-button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #373737;
+    color: white;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    img {
+      width: 25px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: #555;
+    }
+
+    &:disabled {
+      background-color: #252525;
+      cursor: not-allowed;
+    }
+  }
 }

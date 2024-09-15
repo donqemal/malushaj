@@ -1,7 +1,47 @@
-<div style="height: 200px; width: 400px; background-color: #444; border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: column">
-  <h1 style="margin-top: -15px; color: white; margin-bottom: 30px">Contact Me</h1>
-  <div class="tooltip-container" (click)="sendMail()">
-    <span class="tooltip">edon&#64;malushaj.ch</span>
-    <span class="text">&#64;</span>
+<h1>Find out more</h1>
+<div class="container">
+  <div class="github block" (click)="openPage('github')">
+    <img src="assets/github_logo.png" alt="github logo">
   </div>
+  <div class="linkedin block" (click)="openPage('linkedin')">
+    <img src="assets/linkedin_logo.png" alt="linkedin logo">
+  </div>
+</div>
+
+<h1 class="contact-title">Contact me</h1>
+<div class="contact-container">
+  <label class="label">
+  <span class="icon">
+    <img src="assets/person_icon.png" alt="person icon">
+  </span>
+    <input
+      type="text"
+      class="input"
+      placeholder="Your name"
+      autocomplete="off"
+      [(ngModel)]="name"
+    />
+  </label>
+  <label class="label">
+  <span class="icon">
+    <img src="assets/mail_icon.png" alt="mail icon">
+  </span>
+    <input
+      type="email"
+      class="input"
+      placeholder="example@mail.com"
+      autocomplete="off"
+      [(ngModel)]="email"
+    />
+  </label>
+  <div class="textarea-field">
+    <textarea class="label" placeholder="Your message" [(ngModel)]="message"></textarea>
+    <span class="icon">
+    <img src="assets/message_icon.png" alt="message icon">
+  </span>
+  </div>
+  <button class="submit-button" (click)="sendMail()" [disabled]="!areFieldsFilled()">
+    <img src="assets/send_icon.png" alt="send icon">
+    Send
+  </button>
 </div>

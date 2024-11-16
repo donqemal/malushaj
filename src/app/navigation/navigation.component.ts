@@ -1,13 +1,15 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, RouterLink} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
   imports: [
     RouterLink,
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'

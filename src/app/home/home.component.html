@@ -1,7 +1,7 @@
 <div class="container">
   <div class="who-am-i block">
-    <h2>Who am I?</h2>
-    <h3>Hey, I'm Edon, a skilled software developer specializing in web and mobile apps. Always pushing myself to go beyond my limits!</h3>
+    <h2>{{ 'WHO_AM_I' | translate }}</h2>
+    <h3>{{ 'WHO_AM_I_DESCRIPTION' | translate }}</h3>
   </div>
   <div class="image block">
     <img src="assets/aesthetic.png" alt="Roadway picture">
@@ -18,11 +18,11 @@
   </div>
 
   <div class="quote block">
-    <h2>’’Searching for someone to blame is such a pain’’</h2>
+    <h2>’’Imagine some motivational quote here’’</h2>
   </div>
 
   <div class="technologies block">
-    <h2>Technologies I've worked with</h2>
+    <h2>{{ 'TECHNOLOGIES_DESCRIPTION' | translate }}</h2>
     <div class="icons">
       <img src="assets/js.png" alt="javascript" title="Javascript" (click)="search('javascript')">
       <img src="assets/ts.png" alt="typescript" title="Typescript" (click)="search('typescript')">
@@ -39,10 +39,10 @@
   </div>
 
   <div class="education block">
-    <h2>Education</h2>
-    <h3>Apprenticeship as a Software Developer<span> (2021 - Today)</span></h3>
-    <h4>Hands-on experience with coding, debugging, and project work. Continuously learning and enhancing skills.</h4>
-    <h3>Higher School Certificate (2021 - Today)<span> (2021 - Today)</span></h3>
-    <h4>I am currently in the final year of a Berufsmatura in Lucerne.</h4>
+    <h2>{{ 'EDUCATION' | translate }}</h2>
+    <h3>{{ 'APPRENTICESHIP_TITLE' | translate }}<span> (2021 - {{ 'TODAY' | translate }})</span></h3>
+    <h4>{{ 'APPRENTICESHIP_DESCRIPTION' | translate }}</h4>
+    <h3>{{ 'BM_TITLE' | translate }}<span> (2021 - {{ 'TODAY' | translate }})</span></h3>
+    <h4> {{ 'BM_DESCRIPTION' | translate }}</h4>
   </div>
 </div>

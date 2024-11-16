@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
@@ -23,7 +25,7 @@ export class ContactComponent {
     if (page === 'linkedin') {
       window.open('https://ch.linkedin.com/in/edon-malushaj-923a6a261/', '_blank');
     } else {
-      window.open('https://github.com/Nenoxxx', '_blank');
+      window.open('https://github.com/donqemal', '_blank');
     }
   }
 

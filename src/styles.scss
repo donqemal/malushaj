@@ -16,6 +16,12 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+}
+
 
 @keyframes appearFromCenter {
   from {

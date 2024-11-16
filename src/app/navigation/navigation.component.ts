@@ -22,6 +22,7 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.router.events.subscribe(() => {
+      window.scrollTo(0, 0);
       const currentRoute = this.router.url;
       if (currentRoute.includes('projects')) {
         this.selectedTab = 'projects';

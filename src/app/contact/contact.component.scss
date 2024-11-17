@@ -79,6 +79,7 @@ h1 {
   opacity: 0;
 
   .label, textarea {
+    cursor: text;
     position: relative;
     width: 100%;
     display: flex;

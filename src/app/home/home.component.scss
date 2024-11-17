@@ -262,6 +262,10 @@ h2 {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
+
+    img {
+      filter: grayscale(0) !important;
+    }
   }
 
   .education {

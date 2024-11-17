@@ -66,3 +66,30 @@
 .tab--3:checked ~ .indicator {
   left: calc(130px * 2);
 }
+
+@media screen and (max-width: 768px) {
+  .tab-container {
+    width: 90%;
+  }
+
+  .indicator {
+    width: calc(100% / 3);
+    height: 34px;
+  }
+
+  .tab {
+    width: calc(100% / 3);
+  }
+
+  .tab--1:checked ~ .indicator {
+    left: 4px;
+  }
+
+  .tab--2:checked ~ .indicator {
+    left: calc(100% / 3);
+  }
+
+  .tab--3:checked ~ .indicator {
+    left: calc(98% / 3 * 2);
+  }
+}
